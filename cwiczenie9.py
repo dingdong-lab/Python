@@ -35,17 +35,16 @@ grupa4['class'] = grupa4['class'].astype('|S')
 grupa4.drop('petal length in cm', axis=1, inplace=True)
 grupa4.drop('petal width in cm', axis=1, inplace=True)
 
-#grupa4[grupa4['class']==b'Iris-setosa'].plot.scatter(x='sepal length in cm', y='sepal width in cm', c='black', label='Iris Setosa')
-#grupa4[grupa4['class']==b'Iris-versicolor'].plot.scatter(x='sepal length in cm', y='sepal width in cm', c='red', label='Iris Versicolour')
-#grupa4[grupa4['class']==b'Iris-virginica'].plot.scatter(x='sepal length in cm', y='sepal width in cm', c='blue', label='Iris Virginica')
+grupa4[grupa4['class']==b'Iris-setosa'].plot.scatter(x='sepal length in cm', y='sepal width in cm', c='black', label='Iris Setosa')
+grupa4[grupa4['class']==b'Iris-versicolor'].plot.scatter(x='sepal length in cm', y='sepal width in cm', c='red', label='Iris Versicolour')
+grupa4[grupa4['class']==b'Iris-virginica'].plot.scatter(x='sepal length in cm', y='sepal width in cm', c='blue', label='Iris Virginica')
 
-#plt.show()
+plt.show()
 
 #5
-dane3 = pd.read_csv('zamowienia.csv', sep=';')
+dane3 = pd.read_csv('zamowienia.csv', delimiter=';')
 grupa5 = dane3.groupby(['Sprzedawca']).agg({'idZamowienia':['sum']})
-print(grupa5)
 
-grupa5.plot.bar()
-plt.show()
+#grupa5.plot.bar()
+#plt.show()
 

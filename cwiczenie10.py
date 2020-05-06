@@ -55,7 +55,7 @@ import random
 #zad 4
 #lista8 = [x/10 for x in range(1,301)]
 #lista9 = [math.sin(x) for x in lista8]
-#lista10 = [math.cos(x) for x in lista8]
+#lista10 = [math.cos(x)+2 for x in lista8]
 #lista11 = [-math.sin(x) for x in lista8]
 
 #plt.plot(lista8, lista9, label='sin x')
